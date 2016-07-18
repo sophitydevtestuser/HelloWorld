@@ -1,0 +1,41 @@
+<div class="container">
+	<form [formGroup]="registerForm" novalidate>
+		<div class="form-group">
+			<div>Username</div>
+			<div class="form-control">
+				<input type="text" name="userName" formControlName="userName" [(ngModel)]="user.name" required/>
+			</div>
+			<div class="alert alert-danger" *ngIf="registerForm.submitted && !registerForm.controls.userName.valid">
+				<div *ngIf="!registerForm.controls.userName.errors?.required"> * Required Field</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div>Email Address</div>
+			<div class="form-control">
+				<input type="text" name="emailId" formControlName="emailId" [(ngModel)]="user.email" required/>
+			</div>
+			<div class="alert alert-danger" *ngIf="registerForm.submitted && !registerForm.controls.emailId.valid">
+				<div *ngIf="!registerForm.controls.emailId.errors?.required"> * Required Field</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div>Password</div>
+			<div class="form-control">
+				<input type="text" name="passwd" formControlName="passwd" [(ngModel)]="user.passwd" required/>
+			</div>
+			<div class="alert alert-danger" *ngIf="registerForm.submitted && !registerForm.controls.passwd.valid">
+				<div *ngIf="!registerForm.controls.passwd.errors?.required"> * Required Field</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div>Confirm Password</div>
+			<div class="form-control">
+				<input type="text" name="retypePasswd" formControlName="retypePasswd" [(ngModel)]="user.retypePasswd" required/>
+			</div>
+			<div class="alert alert-danger" *ngIf="registerForm.submitted && !registerForm.controls.retypePasswd.valid">
+				<div *ngIf="!registerForm.controls.retypePasswd.errors?.required"> * Required Field</div>
+			</div>
+		</div>
+		<button type="submit">Register</button>
+	</form>
+</div>
