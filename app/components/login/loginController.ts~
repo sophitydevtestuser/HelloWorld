@@ -1,10 +1,15 @@
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 import {Component, View} from 'angular2/angular2';
 import {LoginService} from './loginService';
 import {Router} from 'angular2/router'
 
 @Component({
     selector: 'login',
-    providers: [LoginService]
+    viewBindings: [LoginService]
 })
 @View({
     templateUrl: './components/login/login.html'
