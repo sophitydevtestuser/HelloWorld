@@ -1,6 +1,6 @@
 # http://editorconfig.org
 root = true
-
+agm
 [*]
 indent_style = space
 indent_size = 4
